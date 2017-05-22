@@ -1,4 +1,4 @@
-documentWidth = document.body.clientWidth;
+documentWidth = $(window).With();
 gridContainerWidth = 0.92 * documentWidth;
 cellSideLength = 0.18 * documentWidth;
 cellSpace = 0.04 * documentWidth;
