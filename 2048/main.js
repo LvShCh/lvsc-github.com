@@ -88,6 +88,12 @@ function UpdateBoardView() {
 
 				theNumberCell.css("background-color",GetNumberBackGroundColor(board[i][j]));
 				theNumberCell.css("color",GetNumberColor(board[i][j]));
+				if (board[i][j]>1023) {
+					theNumberCell.css("font-size",40+'px');
+				}
+				else{
+					theNumberCell.css("font-size",0.6*cellSideLength+'px');
+				}
 				theNumberCell.text(board[i][j]);
 			}
 			hasConflicted[i][j] = false; 
@@ -95,7 +101,7 @@ function UpdateBoardView() {
 
 	}
 	$('.number-cell').css('line-height',cellSideLength+'px');
-	$('.number-cell').css('font-size',0.6*cellSideLength+'px');
+	//$('.number-cell').css('font-size',0.6*cellSideLength+'px');
 }
 
 function GenerateOneNumber() {
